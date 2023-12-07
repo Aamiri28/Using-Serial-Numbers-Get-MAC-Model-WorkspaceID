@@ -14,7 +14,7 @@ web.get('https://common.cloud.hpe.com/')
 
 # Use WebDriverWait to wait for the element to be present
 wait = WebDriverWait(web, 10)
-user = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[3]/main/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/span/input")))
+user = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[5]/main/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/span/input")))
 
 time.sleep(3)
 UserName = "mohammed.zeeshan-a@hpe.com"
@@ -149,7 +149,7 @@ for row_num in range(2, sheet.max_row + 1):
 
     # Append the details to the output Excel file
     output_row_num = output_sheet.max_row + 1
-    output_sheet.cell(row=output_row_num, column=1, value=copied_serial)
+    output_sheet.cell(row=output_row_num, column=1, value=serial_number)
     output_sheet.cell(row=output_row_num, column=2, value=copied_model)
     output_sheet.cell(row=output_row_num, column=3, value=copied_mac)
     output_sheet.cell(row=output_row_num, column=4, value=copied_folder)
